@@ -1,103 +1,78 @@
+import './gallery.css';
+import { renderPictures } from "../pictures/pictures.js";
+
 // crear contenedor para las imagenes
 const createImageContainer = () => {
-  const body = document.querySelector('body')
-  const main = document.createElement('main')
-  main.className = 'image-container'
-  body.appendChild(main)
-}
+  const body = document.querySelector('body');
+  const main = document.createElement('main');
+  main.className = 'image-container';
+  body.appendChild(main);
+};
 
-// url de las fotos
+// url de la API
 let keyword = "";
-const accessKey = 'sxCoc4OGN_P3Y-F7Fd7YiIFHGSrRqrsz3QHZITAcnHU'
-const unsplashRandom = `https://api.unsplash.com/photos/random?count=12&client_id=${accessKey}`
-const url = `https://api.unsplash.com/search/photos?query=${keyword}&per_page=12&client_id=${accessKey}`
+const accessKey = 'sxCoc4OGN_P3Y-F7Fd7YiIFHGSrRqrsz3QHZITAcnHU';
 
 // crear imagenes random
-const imagesRandom = async () => {
+export async function imagesRandom() {
+  const unsplashRandom = `https://api.unsplash.com/photos/random?count=15&client_id=${accessKey}`;
+
+  const response = await fetch(unsplashRandom);
+  const data = await response.json();
+  console.log(data);
+  
+  const main = document.querySelector('.image-container');
+  main.innerHTML = '';
+  renderPictures(data);
+};
+
+// crear imagenes introducidas en el input
+// uso try catch para un mejor control de errores
+export async function searchImages() {
+  const input = document.querySelector('.input-form-nav');
+  keyword = input.value;
+  console.log('PALABRA DEL INPUT: ', keyword);
+  const url = `https://api.unsplash.com/search/photos?page=1&query=${keyword}&per_page=15&client_id=${accessKey}`;
+
   try {
-    const api = await fetch(unsplashRandom)
-    const apiJson = await api.json()
-    console.log(apiJson)
-    const main = document.querySelector('.image-container')
-    main.innerHTML = ''
-    
-    for (const random of apiJson) {
-      const imageRandom = document.createElement('img')
-      imageRandom.className = 'image-random'
-      imageRandom.src = random.urls.small
-      const imageLink = document.createElement('a')
-      imageLink.href = random.links.html
-      imageLink.target = '_blank'
-      imageLink.appendChild(imageRandom)
-      main.appendChild(imageLink)
-    }
-  } catch (error) {
-    console.error('Algo ha salido mal en el randonImages 😅', error)
-  }
-}
+  const response = await fetch(url);
+  const datas = await response.json();
+  const data = datas.results;
+  console.log('Respuesta de la API:', datas);
+  console.log(data);
+  const main = document.querySelector('.image-container');
+  main.innerHTML = '';
+  renderPictures(data);
+  } catch (error) {console.error('ERROR EN EL searchImages', error);}
+};
 
-const searchImages = async () => {
-  try {
-    const input = document.querySelector('input')
-    let keyword = input.value;
-    console.log('Palabra de búsqueda:', keyword)
-    /*    NO LO PONGO A PRUEBA TODAVIA YA QUE NO ME FUNCIONA EL INPUT
-    if (!keyword) {
-      alert('No hay ninguna imagen que coincida con la descripcion')
-      return
-    }*/
-    const accessKey = 'sxCoc4OGN_P3Y-F7Fd7YiIFHGSrRqrsz3QHZITAcnHU'
-    const url = `https://api.unsplash.com/search/photos?query=${keyword}&per_page=12&client_id=${accessKey}`
-    const response = await fetch(url)
-    const data = await response.json()
-    console.log('Respuesta de la API:', data)
-    console.log(data.results)
-
-    const main = document.querySelector('.image-container')
-    main.innerHTML = ''
-
-    for (const images of data.results) {
-      const image = document.createElement('img')
-      image.src = images.urls.small
-      const imageLink = document.createElement('a')
-      imageLink.href = images.links.html
-      imageLink.target = '_blank'
-
-      imageLink.appendChild(image)
-      main.appendChild(imageLink)
-    }
-  } catch (error) {
-    console.error('Algo ha salido mal en el Search 😅', error)
-  }
-}
-
-/*
+// creo event para que al introducir texto busque automaticamente las imagenes
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.querySelector('.input-form-nav')
-  if (input) {
-    input.addEventListener('change', searchImages)
-  } else {
-    console.error('Elemento input no encontrado en el DOM.')
-  }
-})
-*/
-
-/*
-document.addEventListener('DOMContentLoaded', function() {
-const inputText = document.querySelector('input');
-inputText.addEventListener('change', function() {
-  console.log(inputText.value);
-  searchImages(keyword);
+  input.addEventListener('input', () => {
+    searchImages();
+  });
 });
-})
-*/
-
-//  const input = document.querySelector('.input-form-nav');
-//  input.addEventListener('input', searchImages);
 
 const renderImages = () => {
-  createImageContainer()
-  imagesRandom()
-  searchImages()
-}
-export { renderImages }
+  createImageContainer();
+  imagesRandom();
+  searchImages();
+};
+export { renderImages };
+
+// no estoy usandolo ya que no hay manera de que funcione, genera error uncaught y hace una recarga de la pagina
+/*
+document.addEventListener('DOMContentLoaded', () => {
+  const inputPressKey = document.querySelector('.input-form-nav')
+  inputPressKey.addEventListener('keyup', (event) => {
+    console.log('TECLA PRESIONADA: ', event.key);
+    try {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        console.log('SE HA PRESIONADO LA TECLA ENTER');
+        searchImages();
+      }
+    } catch (error) {console.error('ERROR EN EL addEventListener KEYUP', error);}
+  });
+});*/

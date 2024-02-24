@@ -1,14 +1,64 @@
-/* MAIN */
-
-.card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: var(--rtc-gap-m);
-  width: 100%;
-  height: 100%;
-  position: relative; 
+.image-container {
+  display: block;
+  margin: 100px;
+  width: 90%;
+  height: 90%;
+  scroll-margin: none;
 }
 
+.image-container > a > img {
+  border-radius: var(--rtc-radius-l);
+  margin: var(--rtc-margin-xs);
+  width: 200px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.image-container > a > img:hover {
+  filter: contrast(40%);
+  cursor: pointer;
+  transform: var(--rtc-scale-xs);
+  transition: 1s;
+}
+
+@media (width <= 1712px) {
+  .image-container {
+    margin-left: var(--rtc-margin-xl);
+    width: 95%;
+    height: 90%;
+    scroll-margin: none;
+  }
+
+  .image-container > a > img {
+    width: 225px;
+    height: 325px;
+  }
+}
+
+@media (width <= 660px) {
+  .image-container {
+    margin-top: var(--rtc-margin-s);
+    width: 95%;
+    height: 90%;
+    scroll-margin: none;
+  }
+
+  .image-container > a > img {
+    width: 180px;
+    height: 240px;
+  }
+}
+
+@media (width <= 441px) {
+  .image-container > a > img {
+    width: 140px;
+    height: 200px;
+  }
+}
+
+@media (width <= 338px) {
+  .image-container > a > img {
+    width: 120px;
+    height: 160px;
+  }
+}

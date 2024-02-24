@@ -1,5 +1,5 @@
 {
-  "name": "proyecto-3---async-web-desing",
+  "name": "proyecto-3---async-web-design",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.0.8"
+    "vite": "^5.1.4"
   },
   "dependencies": {
     "unsplash-js": "^7.0.19"

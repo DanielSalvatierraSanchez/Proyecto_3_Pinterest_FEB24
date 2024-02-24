@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: var(--rtc-margin-xs);
+  /* margin-top: 60%; */
+  position: sticky;
+  width: 90%;
+  height: 60px;
+}
+
+footer > div {
+  display: flex;
+  gap: var(--rtc-gap-xs);
+}
+
+footer > div:hover {
+  transform: var(--rtc-scale-s);
+}
+
+.author-footer, .linkweb-footer {
+  font-family: kanit;
+}
+
+.linkrtc-footer {
+  text-decoration: none;
+}
+
+.mailimg-footer, .linkedinimg-footer, .githubimg-footer {
+  width: 35px;
+  height: 35px;
+}
+
+.mailimg-footer:hover, .linkedinimg-footer:hover, .githubimg-footer:hover {
+  transform: var(--rtc-scale-m);
+  transition: 1s;
+}
