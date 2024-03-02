@@ -21,7 +21,7 @@ const createHeaderLogo = () => {
 
   const imgHeader = document.createElement('img');
   imgHeader.className = 'img-header';
-  imgHeader.src = '../../../public/assets/logo2.webp';
+  imgHeader.src = '/public/assets/logo2.webp';
   imgHeader.alt = 'Logo Pinterest';
 
   header.appendChild(divHeader);
