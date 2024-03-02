@@ -36,7 +36,7 @@ export const createFooter = () => {
   mail.href = 'mailto: dss250583@gmail.com';
   const mailImg = document.createElement('img');
   mailImg.className = 'mailimg-footer';
-  mailImg.src = '../../../public/assets/correo.png';
+  mailImg.src = '../../../public/assets/correo.webp';
   mail.target = '_blank';
   mailImg.title = 'Contactame por email';
 
@@ -44,7 +44,7 @@ export const createFooter = () => {
   linkedin.href = 'https://www.linkedin.com/in/daniel-salvatierra-sanchez/';
   const linkedinImg = document.createElement('img');
   linkedinImg.className = 'linkedinimg-footer';
-  linkedinImg.src = '../../../public/assets/linkedin.png';
+  linkedinImg.src = '../../../public/assets/linkedin.webp';
   linkedin.target = '_blank';
   linkedinImg.title = 'Accede a mi LinkedIn';
   
@@ -52,7 +52,7 @@ export const createFooter = () => {
   github.href = 'https://github.com/DanielSalvatierraSanchez';
   const githubImg = document.createElement('img');
   githubImg.className = 'githubimg-footer';
-  githubImg.src = '../../../public/assets/github.png';
+  githubImg.src = '../../../public/assets/github.webp';
   github.target = '_blank';
   githubImg.title = 'Hechale un vistazo... espero que te guste!';
 

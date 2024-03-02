@@ -49,7 +49,7 @@ const createMenuNav = () => {
   aNotificacion.title = 'Notificaciones';
   const imgNotificacion = document.createElement('img');
   imgNotificacion.className = 'img-menu-nav';
-  imgNotificacion.src = '../../../public/assets/campana.png';
+  imgNotificacion.src = '../../../public/assets/campana.webp';
 
   const aFavorito = document.createElement('a');
   aFavorito.className = 'a-menu-nav';
@@ -59,7 +59,7 @@ const createMenuNav = () => {
   aFavorito.title = 'Favoritos';
   const imgFavorito = document.createElement('img');
   imgFavorito.className = 'img-menu-nav';
-  imgFavorito.src = '../../../public/assets/favorito.png';
+  imgFavorito.src = '../../../public/assets/favorito.webp';
 
   const aPerfil = document.createElement('a');
   aPerfil.className = 'a-menu-nav';
@@ -69,7 +69,7 @@ const createMenuNav = () => {
   aPerfil.title = 'Mi Perfíl';
   const imgPerfil = document.createElement('img');
   imgPerfil.className = 'img-menu-nav';
-  imgPerfil.src = '../../../public/assets/perfil.png';
+  imgPerfil.src = '../../../public/assets/perfil.webp';
 
   nav.appendChild(divMenuNav);
   divMenuNav.appendChild(aNotificacion);
