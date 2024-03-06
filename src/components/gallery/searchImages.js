@@ -30,7 +30,7 @@ export async function searchImages() {
       const main = document.querySelector('.image-container');
       const inputEmpty = document.createElement('h2');
       inputEmpty.className = 'input-empty';
-      inputEmpty.textContent = 'No se ha encontrado ninguna imagen.';
+      inputEmpty.textContent = 'No se ha encontrado ninguna imagen';
       main.appendChild(inputEmpty);
     };
   } catch (error) {console.error('ERROR EN EL searchImages', error)};
