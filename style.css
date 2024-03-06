@@ -36,6 +36,7 @@
   /* GAP */
   --rtc-gap-xs: 5px;
   --rtc-gap-s: 10px;
+  --rtc-gap-m: 20px;
 
   /* BORDER RADIUS */
   --rtc-radius-xs: 5px;
@@ -51,4 +52,8 @@
   --rtc-scale-m: scale(1.2);
   --rtc-scale-l: scale(1.3);
   --rtc-scale-xl: scale(1.5);
+}
+
+main {
+  min-height: 500px;
 }

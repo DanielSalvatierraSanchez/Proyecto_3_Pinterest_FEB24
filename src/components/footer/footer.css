@@ -3,20 +3,22 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: var(--rtc-margin-xs);
-  margin-top: 5%;
+  margin: var(--rtc-margin-s);
+  margin-top: var(--rtc-margin-xl);
   position: sticky;
   width: 90%;
-  height: 60px;
+  height: 45px;
 }
 
 footer > div {
   display: flex;
   gap: var(--rtc-gap-xs);
+  transition: all 0.5s;
 }
 
 footer > div:hover {
   transform: var(--rtc-scale-s);
+  transition: all 0.5s;
 }
 
 .linkweb-footer {
@@ -31,31 +33,48 @@ footer > div:hover {
 .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
   width: 35px;
   height: 35px;
+  transition: all 1s;
 }
 
 .mailimg-footer:hover, .linkedinimg-footer:hover, .githubimg-footer:hover {
   transform: var(--rtc-scale-l);
-  transition: 1s;
+  transition: all 1s;
 }
 
 @media (width <= 660px) {
   .footer {
     width: 100%;
     margin: var(--rtc-margin-xs);
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  footer > div {
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--rtc-gap-m);
+    margin-top: 0px;
+    padding: var(--rtc-padding-xxl);
+    position: sticky;
   }
 
   .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
     width: 30px;
     height: 30px;
+    margin: 30px;
   }
 
   .mailimg-footer:hover, .linkedinimg-footer:hover, .githubimg-footer:hover {
     transform: var(--rtc-scale-m);
 }
+}
+
+@media (width <= 567px) {
+  .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+  }
+}
+
+@media (width <= 470px) {
+  .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
+    width: 30px;
+    height: 30px;
+  }
 }

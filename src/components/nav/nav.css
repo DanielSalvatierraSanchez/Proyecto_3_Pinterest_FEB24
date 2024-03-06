@@ -49,13 +49,15 @@
   background-color: var(--rtc-color-black);
   border-radius: var(--rtc-radius-l);
   font-size: medium;
-  width: 90px;
+  min-width: 75px;
   height: 40px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .button-form-nav:hover {
   transform: var(--rtc-scale-s);
+  transition: all 0.5s;
 }
 
 /* NAV MENU */
@@ -72,17 +74,24 @@
   height: 30px;
 }
 
+.a-notificacion,
+.a-favorito,
+.a-perfil {
+  transition: all 0.5s;
+}
+
 .a-notificacion:hover,
 .a-favorito:hover,
 .a-perfil:hover {
   background-color: var(--rtc-color-grey);
   border-radius: var(--rtc-radius-xxl);
   transform: var(--rtc-scale-l);
+  transition: all 0.5s;
 }
 
 @media (width <= 660px) {
   .nav {
-    width: 100%;
+    width: 90%;
     margin: var(--rtc-margin-xs);
     position: sticky;
   }

@@ -8,7 +8,7 @@ export const createFooter = () => {
 
   const author = document.createElement('p');
   author.className = 'author-footer';
-  author.textContent = 'Powered by Daniel Salvatierra';
+  author.textContent = 'Developed by Daniel Salvatierra';
   
   const linkWeb = document.createElement('div');
   linkWeb.className = 'linkweb-footer';  

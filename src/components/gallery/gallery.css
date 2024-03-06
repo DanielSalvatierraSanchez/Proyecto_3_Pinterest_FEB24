@@ -12,35 +12,22 @@
   width: 200px;
   height: 350px;
   object-fit: cover;
+  transition: all 1s;
 }
 
 .image-container > a > img:hover {
   filter: contrast(40%);
   cursor: pointer;
   transform: var(--rtc-scale-xs);
-  transition: 1s;
+  transition: all 1s;
 }
 
-.button-plus {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 90px;
-  height: 40px;
-  margin-left: 50%;
-  margin-top: 10%;
+.input-empty {
   font-family: kanit;
-  font-size: medium;
-  color: var(--rtc-color-white);
-  background-color: var(--rtc-color-black);
-  border-radius: var(--rtc-radius-l);
-  cursor: pointer;
-  border-style: none;
-  scroll-behavior: smooth;
-}
-
-.button-plus:hover {
-  transform: var(--rtc-scale-s);
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  cursor: default;
 }
 
 @media (width <= 1712px) {

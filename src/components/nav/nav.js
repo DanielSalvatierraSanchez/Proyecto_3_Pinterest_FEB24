@@ -6,7 +6,7 @@ const createNavBar = () => {
   const nav = document.createElement('nav');
   nav.className = 'nav';
   header.appendChild(nav);
-}
+};
 
 // crear input de busqueda => form > img > input > button
 const createInputNav = () => {
@@ -17,7 +17,7 @@ const createInputNav = () => {
   // imagen de la lupa dentro del input
   const imgInput = document.createElement('img');
   imgInput.className = 'img-form-nav';
-  imgInput.src = 'https://play-lh.googleusercontent.com/6Br-c2aSUrBfXDBZTs_Wz0yAybdVAVj75wvPTgJbpdXqUDwoMDyElFLNkpFlV4i03w';
+  imgInput.src = '../../../public/assets/lupa.webp';
 
   const inputNav = document.createElement('input');
   inputNav.className = 'input-form-nav';
@@ -33,7 +33,7 @@ const createInputNav = () => {
   formInputNav.appendChild(imgInput);
   formInputNav.appendChild(inputNav);
   formInputNav.appendChild(buttonInput);
-}
+};
 
 // crear elementos del menu => div > a + img * 3
 const createMenuNav = () => {
@@ -44,8 +44,8 @@ const createMenuNav = () => {
   const aNotificacion = document.createElement('a');
   aNotificacion.className = 'a-menu-nav';
   aNotificacion.classList = 'a-notificacion';
-  aNotificacion.href = 'https://www.pinterest.es/';
-  aNotificacion.target = '_blank';
+  // aNotificacion.href = 'https://www.pinterest.es/';
+  // aNotificacion.target = '_blank';
   aNotificacion.title = 'Notificaciones';
   const imgNotificacion = document.createElement('img');
   imgNotificacion.className = 'img-menu-nav';
@@ -54,8 +54,8 @@ const createMenuNav = () => {
   const aFavorito = document.createElement('a');
   aFavorito.className = 'a-menu-nav';
   aFavorito.classList = 'a-favorito';
-  aFavorito.href = 'https://www.pinterest.es/';
-  aFavorito.target = '_blank';
+  // aFavorito.href = 'https://www.pinterest.es/';
+  // aFavorito.target = '_blank';
   aFavorito.title = 'Favoritos';
   const imgFavorito = document.createElement('img');
   imgFavorito.className = 'img-menu-nav';
@@ -64,13 +64,13 @@ const createMenuNav = () => {
   const aPerfil = document.createElement('a');
   aPerfil.className = 'a-menu-nav';
   aPerfil.classList = 'a-perfil';
-  aPerfil.href = 'https://www.pinterest.es/';
-  aPerfil.target = '_blank';
+  // aPerfil.href = 'https://www.pinterest.es/';
+  // aPerfil.target = '_blank';
   aPerfil.title = 'Mi Perfíl';
   const imgPerfil = document.createElement('img');
   imgPerfil.className = 'img-menu-nav';
   imgPerfil.src = '../../../public/assets/perfil.webp';
-
+  
   nav.appendChild(divMenuNav);
   divMenuNav.appendChild(aNotificacion);
   aNotificacion.appendChild(imgNotificacion);
@@ -80,10 +80,21 @@ const createMenuNav = () => {
   aPerfil.appendChild(imgPerfil);
 };
 
+// const button = () => {
+//   document.addeventListener('click', () => {
+//     const buttonInput = document.querySelector('button-form-nav');
+//     buttonInput.addEventListener('click', () => {
+      
+//       imagesRandom();
+//     });
+//   });
+//   }
+//   button();
+
 // crear function para pintar functions
 const renderNavBar = () => {
   createNavBar();
   createInputNav();
   createMenuNav();
-}
+};
 export { renderNavBar };

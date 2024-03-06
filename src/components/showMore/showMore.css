@@ -1,0 +1,22 @@
+.button-plus {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  margin-left: 50%;
+  font-family: kanit;
+  font-size: medium;
+  color: var(--rtc-color-white);
+  background-color: var(--rtc-color-black);
+  border-radius: var(--rtc-radius-l);
+  cursor: pointer;
+  border-style: none;
+  scroll-behavior: smooth;
+  transition: all 0.5s;
+}
+
+.button-plus:hover {
+  transform: var(--rtc-scale-s);
+  transition: all 0.5s;
+}
