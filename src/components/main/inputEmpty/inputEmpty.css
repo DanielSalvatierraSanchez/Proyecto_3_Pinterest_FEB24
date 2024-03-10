@@ -1,0 +1,7 @@
+.input-empty {
+  font-family: kanit;
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  cursor: default;
+}

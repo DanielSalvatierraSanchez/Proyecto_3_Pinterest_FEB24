@@ -1,0 +1,37 @@
+.mailimg-footer, .linkedinimg-footer, .githubimg-footer {
+  width: 35px;
+  height: 35px;
+  transition: all 1s;
+}
+
+.mailimg-footer:hover, .linkedinimg-footer:hover, .githubimg-footer:hover {
+  transform: var(--rtc-scale-l);
+  transition: all 1s;
+}
+
+@media (width <= 660px) {
+  .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
+    width: 30px;
+    height: 30px;
+    margin: var(--rtc-margin-m);
+  }
+
+  .mailimg-footer:hover, .linkedinimg-footer:hover, .githubimg-footer:hover {
+    transform: var(--rtc-scale-m);
+}
+}
+
+@media (width <= 567px) {
+  .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+  }
+}
+
+@media (width <= 470px) {
+  .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
+    width: 30px;
+    height: 30px;
+  }
+}

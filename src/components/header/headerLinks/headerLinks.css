@@ -1,0 +1,31 @@
+.a-inicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: large;
+  color: var(--rtc-color-white);
+  background-color: var(--rtc-color-black);
+  width: 80px;
+  height: 40px;
+  border-radius: var(--rtc-radius-l);
+  font-family: kanit;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.a-explorar,
+.a-crear {
+  font-size: large;
+  font-family: kanit;
+  color: var(--rtc-color-black);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.a-inicio:hover, .a-explorar:hover,
+.a-crear:hover {
+  transform: var(--rtc-scale-m);
+  transition: all 0.5s;
+}

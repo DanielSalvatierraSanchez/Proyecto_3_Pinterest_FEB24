@@ -1,0 +1,44 @@
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: var(--rtc-margin-s);
+  margin-top: var(--rtc-margin-xl);
+  position: sticky;
+  width: 90%;
+  height: 45px;
+}
+
+footer > div {
+  display: flex;
+  gap: var(--rtc-gap-xs);
+  transition: all 0.5s;
+}
+
+footer > div:hover {
+  transform: var(--rtc-scale-s);
+  transition: all 0.5s;
+}
+
+.linkweb-footer {
+  font-family: kanit;
+}
+
+.p-linkweb-footer, .author-footer {
+  cursor: default;
+  font-family: kanit;
+}
+
+@media (width <= 660px) {
+  #footer {
+    width: 100%;
+    margin: var(--rtc-margin-xs);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--rtc-gap-m);
+    margin-top: 0px;
+    padding: var(--rtc-padding-xxl);
+    position: sticky;
+  }
+}
