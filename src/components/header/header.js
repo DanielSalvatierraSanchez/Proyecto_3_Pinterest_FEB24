@@ -14,7 +14,7 @@ const createHeaderLogo = () => {
 
   const aHeader = document.createElement('a');
   aHeader.className = 'a-header';
-  aHeader.href = 'https://proyecto-3-pinterest-feb24.netlify.app/';
+  aHeader.href = 'https://proyecto-3-picturest-mar24.netlify.app';
   aHeader.target = '_blank';
 
   const imgHeader = document.createElement('img');

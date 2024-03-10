@@ -14,7 +14,7 @@ export const createNavBarMenu = () => {
   dataNavBar.forEach(dataNavBar => {
     const aNavBar = document.createElement('a');
     aNavBar.className = dataNavBar.classOne;
-    aNavBar.href = 'https://www.pinterest.es/';
+    aNavBar.href = 'https://proyecto-3-picturest-mar24.netlify.app';
     aNavBar.target = '_blank';
     aNavBar.title = dataNavBar.title;
     const imgNavBar = document.createElement('img');

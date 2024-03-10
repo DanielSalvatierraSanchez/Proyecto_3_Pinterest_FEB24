@@ -6,9 +6,9 @@ export const createHeaderLinks = () => {
   divHeader.className = 'menu-header';
   // crear array de datos de cada enlace
   const dataHeader = [
-    { text: 'Inicio', url: 'https://proyecto-3-pinterest-feb24.netlify.app/', class: 'a-menu-header a-inicio', title: 'Acceso directo a una nueva página de inicio' },
-    { text: 'Explorar', url: 'https://proyecto-3-pinterest-feb24.netlify.app/', class: 'a-menu-header a-explorar', title: 'Haz click y conoce las novedades de hoy!!!' },
-    { text: 'Crear', url: 'https://proyecto-3-pinterest-feb24.netlify.app/', class: 'a-menu-header a-crear', title: 'Crea un nuevo Pin y publicalo!!!' }
+    { text: 'Inicio', url: 'https://proyecto-3-picturest-mar24.netlify.app', class: 'a-menu-header a-inicio', title: 'Acceso directo a una nueva página de inicio' },
+    { text: 'Explorar', url: 'https://proyecto-3-picturest-mar24.netlify.app', class: 'a-menu-header a-explorar', title: 'Haz click y conoce las novedades de hoy!!!' },
+    { text: 'Crear', url: 'https://proyecto-3-picturest-mar24.netlify.app', class: 'a-menu-header a-crear', title: 'Crea un nuevo Pin y publicalo!!!' }
   ];
   // bucle sobre el array de datos para crear los elementos
   dataHeader.forEach(dataHeader => {
