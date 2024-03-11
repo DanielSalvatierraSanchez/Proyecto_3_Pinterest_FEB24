@@ -16,7 +16,7 @@ renderNavBar();
 createNavBarMenu();
 createImageContainer();
 imagesRandom();
-//searchImages();
+searchImages();
 createShowMoreButton();
 createFooter();
 footerLinks();
