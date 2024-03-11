@@ -1,15 +1,16 @@
 #header {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100px;
+  margin: var(--rtc-margin-s), var(--rtc-margin-s);
   padding: var(--rtc-padding-xs);
   position: fixed;
   top: 0;
   background-color: var(--rtc-color-white);
-  z-index: 2;
+  z-index: 1;
 }
 
 .div-header {
@@ -44,13 +45,17 @@
 @media (width <= 660px){
   #header {
     flex-direction: column;
+    width: 100%;
     height: 150px;
-    position: sticky;
+    padding: var(--rtc-padding-xs);
+    gap: var(--rtc-gap-xs);
+    position: fixed;
   }
 
   .div-header {
     flex-direction: column;
     justify-content: center;
+    margin-top: var(--rtc-margin-s);
     width: 100%;
   }
 
@@ -67,5 +72,24 @@
   .menu-header {
     width: 100%;
     height: 30px;
+  }
+}
+
+@media (width <= 444px){
+  #header{
+    width: 100%;
+    height: 200px;
+    padding: var(--rtc-padding-xs);
+    gap: var(--rtc-gap-s);
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: var(--rtc-gap-s);
+  }
+
+  .div-menu-nav {
+    justify-content: space-around;
+    width: 100%;
   }
 }

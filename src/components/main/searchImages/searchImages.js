@@ -23,7 +23,9 @@ export async function searchImages() {
   renderPictures(data);
   page++;
   // si no hay datos en el input que muestre mensaje al user
-  //noResults();
+  if (!data.length) {
+    noResults();
+  };
   } catch (error) {console.error('DANI TIENES UN ERROR EN EL searchImages.js', error)};
 };
 // creo event para que al cambiar, como tabular o al hacer click en cualquier sitio en blanco, realice la busqueda (event.preventDefault() evita la recarga de la web)

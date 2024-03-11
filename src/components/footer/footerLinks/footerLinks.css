@@ -13,7 +13,7 @@
   .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
     width: 30px;
     height: 30px;
-    margin: var(--rtc-margin-m);
+    margin: var(--rtc-margin-xxs);
   }
 
   .mailimg-footer:hover, .linkedinimg-footer:hover, .githubimg-footer:hover {
@@ -21,17 +21,12 @@
 }
 }
 
-@media (width <= 567px) {
-  .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
-    width: 30px;
-    height: 30px;
-    margin: 0px;
-  }
-}
-
 @media (width <= 470px) {
   .mailimg-footer, .linkedinimg-footer, .githubimg-footer {
     width: 30px;
     height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
   }
 }
