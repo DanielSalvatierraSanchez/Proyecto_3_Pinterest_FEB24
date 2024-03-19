@@ -1,9 +1,8 @@
 #footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: var(--rtc-margin-s);
+  /* margin: var(--rtc-margin-s); */
   margin-top: var(--rtc-margin-xl);
   position: sticky;
   width: 100%;
