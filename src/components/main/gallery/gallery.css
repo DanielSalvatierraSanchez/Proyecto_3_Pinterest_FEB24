@@ -1,10 +1,9 @@
 .image-container {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin: 100px 50px;
-  width: 100%;
+  /* width: 90%; */
   height: 100%;
-  scroll-margin: none;
-  /* max-width: 100%; */
 }
 
 .image-container > a > img {
