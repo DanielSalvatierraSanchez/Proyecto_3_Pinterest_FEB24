@@ -1,4 +1,4 @@
-# Proyecto_3_Pinterest_FEB24
+# Proyecto_3_Picturest_FEB24
 - Réplica de la web Pinterest con funcionalidad y componentización, creada desde VITE.
 
 - Las imágenes las he obtenido a través de una API, en concreto Unsplash.
@@ -14,7 +14,7 @@
   
 
 
-# Proyect_3_Pinterest_FEB24
+# Project_3_Picturest_FEB24
 - Replica of Pinterest website with functionality and componentization, created from VITE.
 
 - I got the images through an API, specifically of Unsplash.
